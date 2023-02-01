@@ -117,10 +117,10 @@ describe('Database', () => {
       let message, report;
       beforeAll(async() => {
       })
-      it('If report doesnt exist, throws an error with a useful message', async () => {
+      it("If report doesn't exist, throws an error with a useful message", async () => {
         await expect(closeReport(300)).rejects.toThrow('Report does not exist with that id');
       });
-      it('If the passwords dont match, throws an error', async () => {
+      it("If the passwords don't match, throws an error", async () => {
         await expect(closeReport(reportIdToCreate, 'iLoveNothing')).rejects.toThrow('Password incorrect for this report, please try again');
       });
       it('If it has already been closed, throws an error with a useful message', async () => {
